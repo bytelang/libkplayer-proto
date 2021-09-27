@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package KPProto.Msg;
+
+option optimize_for = LITE_RUNTIME;
+
+message EventMessagePlayerStarted {
+}
+
+message EventMessagePlayerEnded {
+}
+
+message EventMessagePlayerPause {
+}
+
+message EventMessagePlayerContinue {
+}
+
+message EventMessagePlayerSkip {
+}

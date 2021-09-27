@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option optimize_for = LITE_RUNTIME;
+
+package KPProto.Prompt;
+
+message EventPromptResourceAdd {
+	string path = 1;
+	string unique = 2;
+}
+
+message EventPromptResourceRemove {
+	string unique = 1;
+}
+

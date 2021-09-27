@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package KPProto.Msg;
+
+option optimize_for = LITE_RUNTIME;
+
+message EventMessageResourceStart {
+	string path = 1;
+}
+
+message EventMessageResourceFinish {
+	string path = 1;
+}
+
+message EventMessageResourceEmpty {
+}

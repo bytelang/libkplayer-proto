@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package KPProto;
+
+import "keys.proto";
+
+option optimize_for = LITE_RUNTIME;
+
+message KPMessage {
+	EventAction action = 1;
+	string body = 2;
+}

@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package KPProto.Prompt;
+
+option optimize_for = LITE_RUNTIME;
+
+message EventPromptPlayerStop {
+}
+
+message EventPromptPlayerPause {
+}
+
+message EventPromptPlayerSkip {
+}
+
+message EventPromptPlayerContinue {
+}
+
+message EventPromptPlayerSeek {
+	int64 seek = 1;
+}

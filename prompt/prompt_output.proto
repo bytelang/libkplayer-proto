@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package KPProto.Prompt;
+
+option optimize_for = LITE_RUNTIME;
+
+message EventPromptOutputAdd {
+	string path = 1;
+	string unique = 2;
+}
+
+message EventPromptOutputRemove {
+	string unique = 1;
+}
