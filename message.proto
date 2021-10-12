@@ -8,6 +8,6 @@ option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto";
 
 message KPMessage {
-	EventAction action = 1;
-	string body = 2;
+  EventAction action = 2;
+  string body = 3;
 }

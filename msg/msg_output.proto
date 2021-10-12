@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package KPProto.Msg;
+
+option optimize_for = LITE_RUNTIME;
+
+message EventMessageOutputAdd {
+    string path = 1;
+    string unique = 2;
+}
+
+message EventMessageOutputRemove {
+    string path = 1;
+    string unique = 2;
+}

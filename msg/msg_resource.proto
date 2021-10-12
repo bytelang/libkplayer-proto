@@ -6,12 +6,24 @@ option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto/msg";
 
 message EventMessageResourceStart {
-	string path = 1;
+  string path = 1;
+  string unique = 2;
 }
 
 message EventMessageResourceFinish {
-	string path = 1;
+  string path = 1;
+  string unique = 2;
 }
 
 message EventMessageResourceEmpty {
+}
+
+message EventMessageResourceAdd {
+  string path = 1;
+  string unique = 2;
+}
+
+message EventMessageResourceRemove {
+  string path = 1;
+  string unique = 2;
 }
