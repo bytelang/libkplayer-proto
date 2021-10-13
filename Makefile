@@ -4,7 +4,9 @@ build-cpp:
 	cd msg && protoc -I=. --cpp_out=. *.proto
 
 build-go:
-	protoc -I=. -I=./prompt -I=./msg --go_out=. *.proto prompt/*.proto msg/*.proto
+	protoc -I=. -I=${PROTO_PATH} -I=./prompt -I=./msg --gogo_out=. *.proto
+	protoc -I=. -I=${PROTO_PATH} -I=./prompt -I=./msg --gogo_out=. prompt/*.proto
+	protoc -I=. -I=${PROTO_PATH} -I=./prompt -I=./msg --gogo_out=. msg/*.proto
 	cp -rf github.com/bytelang/kplayer/proto/* ./
 	rm -rf github.com
 
