@@ -9,5 +9,5 @@ option go_package = "github.com/bytelang/kplayer/proto";
 
 message KPMessage {
   EventAction action = 2;
-  string body = 3;
+  bytes body = 3;
 }
