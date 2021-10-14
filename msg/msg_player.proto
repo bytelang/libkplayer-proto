@@ -5,16 +5,21 @@ package KPProto.Msg;
 option optimize_for = LITE_RUNTIME;
 
 message EventMessagePlayerStarted {
+  string error = 3;
 }
 
 message EventMessagePlayerEnded {
+  string error = 3;
 }
 
 message EventMessagePlayerPause {
+  string error = 3;
 }
 
 message EventMessagePlayerContinue {
+  string error = 3;
 }
 
 message EventMessagePlayerSkip {
+  string error = 3;
 }
