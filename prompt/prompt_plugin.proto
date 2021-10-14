@@ -3,6 +3,9 @@ syntax = "proto3";
 package KPProto.Prompt;
 
 option optimize_for = LITE_RUNTIME;
+option go_package = "github.com/bytelang/kplayer/proto/prompt";
+
+
 
 message EventPromptPluginAdd {
 	string path = 1;
