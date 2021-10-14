@@ -5,30 +5,32 @@ package KPProto.Msg;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto/msg";
 
+import "gogoproto/gogo.proto";
+
 message EventMessageResourceStart {
-  bytes path = 1;
-  bytes unique = 2;
-  bytes error = 3;
+	bytes path = 1 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes unique = 2 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }
 
 message EventMessageResourceFinish {
-  bytes path = 1;
-  bytes unique = 2;
-  bytes error = 3;
+	bytes path = 1 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes unique = 2 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }
 
 message EventMessageResourceEmpty {
-  bytes error = 3;
+	bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }
 
 message EventMessageResourceAdd {
-  bytes path = 1;
-  bytes unique = 2;
-  bytes error = 3;
+	bytes path = 1 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes unique = 2 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }
 
 message EventMessageResourceRemove {
-  bytes path = 1;
-  bytes unique = 2;
-  bytes error = 3;
+	bytes path = 1 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes unique = 2 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }

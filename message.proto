@@ -7,7 +7,9 @@ import "keys.proto";
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto";
 
+import "gogoproto/gogo.proto";
+
 message KPMessage {
-  EventAction action = 2;
-  bytes body = 3;
+	EventAction action = 1;
+	bytes body = 2 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }

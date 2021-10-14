@@ -5,13 +5,15 @@ package KPProto.Prompt;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto/prompt";
 
+import "gogoproto/gogo.proto";
+
 
 message EventPromptResourceAdd {
-	bytes path = 1;
-	bytes unique = 2;
+	bytes path = 1 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+	bytes unique = 2 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }
 
 message EventPromptResourceRemove {
-	bytes unique = 1;
+	bytes unique = 1 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
 }
 
