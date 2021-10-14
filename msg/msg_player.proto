@@ -5,22 +5,20 @@ package KPProto.Msg;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto/msg";
 
-import "gogoproto/gogo.proto";
-
 message EventMessagePlayerStarted {
- bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+ bytes error = 3;
 }
 
 message EventMessagePlayerEnded {
- bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+ bytes error = 3;
 }
 
 message EventMessagePlayerPause {
- bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+ bytes error = 3;
 }
 
 message EventMessagePlayerContinue {
- bytes error = 3 [(gogoproto.nullable) = false, (gogoproto.customtype) = "string"];
+ bytes error = 3;
 }
 
 message EventMessagePlayerSkip {

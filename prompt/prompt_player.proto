@@ -5,8 +5,6 @@ package KPProto.Prompt;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto/prompt";
 
-import "gogoproto/gogo.proto";
-
 message EventPromptPlayerStop {
 }
 
