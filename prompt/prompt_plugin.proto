@@ -5,13 +5,11 @@ package KPProto.Prompt;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto/prompt";
 
-
-
 message EventPromptPluginAdd {
-	string path = 1;
-	string unique = 2;
+  bytes path = 1;
+	bytes unique = 2;
 }
 
 message EventPromptPluginRemove {
-	string unique = 1;
+	bytes unique = 1;
 }

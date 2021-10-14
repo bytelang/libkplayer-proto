@@ -6,21 +6,21 @@ option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/proto/msg";
 
 message EventMessagePlayerStarted {
-  string error = 3;
+ bytes error = 3;
 }
 
 message EventMessagePlayerEnded {
-  string error = 3;
+ bytes error = 3;
 }
 
 message EventMessagePlayerPause {
-  string error = 3;
+ bytes error = 3;
 }
 
 message EventMessagePlayerContinue {
-  string error = 3;
+ bytes error = 3;
 }
 
 message EventMessagePlayerSkip {
-  string error = 3;
+ bytes error = 3;
 }

@@ -7,11 +7,11 @@ option go_package = "github.com/bytelang/kplayer/proto/prompt";
 
 
 message EventPromptResourceAdd {
-	string path = 1;
-	string unique = 2;
+	bytes path = 1;
+	bytes unique = 2;
 }
 
 message EventPromptResourceRemove {
-	string unique = 1;
+	bytes unique = 1;
 }
 
