@@ -3,13 +3,14 @@ syntax = "proto3";
 package KPProto.Prompt;
 
 option optimize_for = LITE_RUNTIME;
-option go_package = "github.com/bytelang/kplayer/types/core/prompt";
+option go_package = "github.com/bytelang/kplayer/types/core/proto/prompt";
 
+import "gogoproto/gogo.proto";
 import "proto/keys.proto";
 
 // add resource
 message EventPromptResourceAdd {
-	PromptResource resource = 1;
+	PromptResource resource = 1 [(gogoproto.nullable) = false];
 }
 
 // remove matching unique name resource

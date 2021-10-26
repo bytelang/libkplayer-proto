@@ -3,47 +3,48 @@ syntax = "proto3";
 package KPProto.Msg;
 
 option optimize_for = LITE_RUNTIME;
-option go_package = "github.com/bytelang/kplayer/types/core/msg";
+option go_package = "github.com/bytelang/kplayer/types/core/proto/msg";
 
 import "proto/keys.proto";
+import "gogoproto/gogo.proto";
 
 // message resource start playing
 message EventMessageResourceStart {
-  MessageResource resource = 1;
-  bytes error = 2;
+	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	bytes error = 2;
 }
 
 // message resource play finished
 message EventMessageResourceFinish {
-  MessageResource resource = 1;
-  bytes error = 2;
+	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	bytes error = 2;
 }
 
 // message resource empty wait for new resource
 message EventMessageResourceEmpty {
-  bytes error = 3;
+	bytes error = 3;
 }
 
 // message resource had success add
 message EventMessageResourceAdd {
-  MessageResource resource = 1;
-  bytes error = 2;
+	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	bytes error = 2;
 }
 
 // message resource had success remove
 message EventMessageResourceRemove {
-  MessageResource resource = 1;
-  bytes error = 2;
+	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	bytes error = 2;
 }
 
 // message current no playlist
 message EventMessageResourceList {
-  repeated MessageResource resource = 1;
-  bytes error = 2;
+	repeated MessageResource resource = 1 [(gogoproto.nullable) = false];
+	bytes error = 2;
 }
 
 // message play history playlist
 message EventMessageResourceHistory {
-  repeated MessageResource resource = 1;
-  bytes error = 2;
+	repeated MessageResource resource = 1;
+	bytes error = 2;
 }

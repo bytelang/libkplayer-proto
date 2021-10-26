@@ -3,16 +3,17 @@ syntax = "proto3";
 package KPProto.Msg;
 
 option optimize_for = LITE_RUNTIME;
-option go_package = "github.com/bytelang/kplayer/types/core/msg";
+option go_package = "github.com/bytelang/kplayer/types/core/proto/msg";
 
 import "proto/keys.proto";
+import "gogoproto/gogo.proto";
 
 message EventMessagePluginAdd {
-	MessagePlugin plugin = 1;
+	MessagePlugin plugin = 1 [(gogoproto.nullable) = false];
 	bytes error = 2;
 }
 
 message EventMessagePluginRemove {
-	MessagePlugin plugin = 1;
+	MessagePlugin plugin = 1 [(gogoproto.nullable) = false];
 	bytes error = 2;
 }
