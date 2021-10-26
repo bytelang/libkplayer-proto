@@ -3,7 +3,7 @@ syntax = "proto3";
 package KPProto;
 
 option optimize_for = LITE_RUNTIME;
-option go_package = "github.com/bytelang/kplayer/types/core";
+option go_package = "github.com/bytelang/kplayer/types/core/proto";
 
 import "gogoproto/gogo.proto";
 

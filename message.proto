@@ -5,7 +5,7 @@ package KPProto;
 import "proto/keys.proto";
 
 option optimize_for = LITE_RUNTIME;
-option go_package = "github.com/bytelang/kplayer/types/core";
+option go_package = "github.com/bytelang/kplayer/types/core/proto";
 
 message KPMessage {
 	EventAction action = 2;

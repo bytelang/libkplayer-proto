@@ -3,7 +3,7 @@ syntax = "proto3";
 package KPProto.Msg;
 
 option optimize_for = LITE_RUNTIME;
-option go_package = "github.com/bytelang/kplayer/types/core/msg";
+option go_package = "github.com/bytelang/kplayer/types/core/proto/msg";
 
 message EventMessagePlayerStarted {
  bytes error = 3;
