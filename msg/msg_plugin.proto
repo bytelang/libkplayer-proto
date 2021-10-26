@@ -5,14 +5,14 @@ package KPProto.Msg;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/msg";
 
-import "keys.proto";
+import "proto/keys.proto";
 
 message EventMessagePluginAdd {
-	PromptPlugin plugin = 1;
+	MessagePlugin plugin = 1;
 	bytes error = 2;
 }
 
 message EventMessagePluginRemove {
-	PromptPlugin plugin = 1;
+	MessagePlugin plugin = 1;
 	bytes error = 2;
 }

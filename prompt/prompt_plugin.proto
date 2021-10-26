@@ -5,7 +5,7 @@ package KPProto.Prompt;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/prompt";
 
-import "keys.proto";
+import "proto/keys.proto";
 
 message EventPromptPluginAdd {
 	PromptPlugin plugin = 1;
