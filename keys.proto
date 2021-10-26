@@ -63,3 +63,39 @@ enum EventAction {
 	EVENT_MESSAGE_ACTION_PLUGIN_REMOVE = 25;
 
 }
+
+// resource
+message MessageResource {
+	bytes path = 1;
+	bytes unique = 2;
+	uint64 start_time = 3;
+	uint64 end_time = 4;
+}
+message PromptResource {
+	bytes path = 1;
+	bytes unique = 2;
+}
+
+// output
+message MessageOutput {
+	bytes path = 1;
+	bytes unique = 2;
+	uint64 start_time = 3;
+}
+message PromptOutput {
+	bytes path = 1;
+	bytes unique = 2;
+}
+
+// plugin
+message MessagePlugin {
+	bytes path = 1;
+	bytes unique = 2;
+	uint64 start_time = 3;
+	map<string, bytes> params = 4;
+}
+message PromptPlugin {
+	bytes path = 1;
+	bytes unique = 2;
+	map<string, bytes> params = 4;
+}

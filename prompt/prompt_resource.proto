@@ -5,12 +5,22 @@ package KPProto.Prompt;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/prompt";
 
+import "keys.proto";
+
+// add resource
 message EventPromptResourceAdd {
-	bytes path = 1;
-	bytes unique = 2;
+	PromptResource resource = 1;
 }
 
+// remove matching unique name resource
 message EventPromptResourceRemove {
 	bytes unique = 1;
 }
 
+// get player current resource list
+message EventPromptResourceList {
+}
+
+// get player play history
+message EventPromptResourceHistory {
+}

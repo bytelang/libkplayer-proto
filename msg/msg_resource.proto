@@ -5,30 +5,49 @@ package KPProto.Msg;
 option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/msg";
 
+import "keys.proto";
+
+// message resource start playing
 message EventMessageResourceStart {
 	bytes path = 1;
 	bytes unique = 2;
 	bytes error = 3;
 }
 
+// message resource play finished
 message EventMessageResourceFinish {
 	bytes path = 1;
 	bytes unique = 2;
 	bytes error = 3;
 }
 
+// message resource empty wait for new resource
 message EventMessageResourceEmpty {
 	bytes error = 3;
 }
 
+// message resource had success add
 message EventMessageResourceAdd {
 	bytes path = 1;
 	bytes unique = 2;
 	bytes error = 3;
 }
 
+// message resource had success remove
 message EventMessageResourceRemove {
 	bytes path = 1;
 	bytes unique = 2;
 	bytes error = 3;
+}
+
+// message current no playlist
+message EventMessageResourceList {
+	repeated MessageResource resource = 1;
+	bytes error = 2;
+}
+
+// message play history playlist
+message EventMessageResourceHistory {
+	repeated MessageResource resource = 1;
+	bytes error = 2;
 }
