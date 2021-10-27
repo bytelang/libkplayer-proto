@@ -15,3 +15,6 @@ message EventPromptPluginAdd {
 message EventPromptPluginRemove {
 	bytes unique = 1;
 }
+
+message EventPromptPluginList {
+}

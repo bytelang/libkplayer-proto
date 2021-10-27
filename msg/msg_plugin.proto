@@ -17,3 +17,8 @@ message EventMessagePluginRemove {
 	MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
+
+message EventMessagePluginList {
+	repeated MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
+	bytes error = 2;
+}
