@@ -9,11 +9,11 @@ import "proto/keys.proto";
 import "gogoproto/gogo.proto";
 
 message EventMessagePluginAdd {
-	MessagePlugin plugin = 1 [(gogoproto.nullable) = false];
+	MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 
 message EventMessagePluginRemove {
-	MessagePlugin plugin = 1 [(gogoproto.nullable) = false];
+	MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }

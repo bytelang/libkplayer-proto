@@ -9,7 +9,7 @@ import "proto/keys.proto";
 import "gogoproto/gogo.proto";
 
 message EventPromptPluginAdd {
-	PromptPlugin plugin = 1 [(gogoproto.nullable) = false];
+	PromptPlugin plugin = 1 [(gogoproto.nullable) = true];
 }
 
 message EventPromptPluginRemove {

@@ -10,13 +10,13 @@ import "gogoproto/gogo.proto";
 
 // message resource start playing
 message EventMessageResourceStart {
-	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	MessageResource resource = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 
 // message resource play finished
 message EventMessageResourceFinish {
-	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	MessageResource resource = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 
@@ -27,19 +27,19 @@ message EventMessageResourceEmpty {
 
 // message resource had success add
 message EventMessageResourceAdd {
-	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	MessageResource resource = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 
 // message resource had success remove
 message EventMessageResourceRemove {
-	MessageResource resource = 1 [(gogoproto.nullable) = false];
+	MessageResource resource = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 
 // message current no playlist
 message EventMessageResourceList {
-	repeated MessageResource resource = 1 [(gogoproto.nullable) = false];
+	repeated MessageResource resource = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 

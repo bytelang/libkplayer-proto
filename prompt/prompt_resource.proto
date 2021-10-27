@@ -10,7 +10,7 @@ import "proto/keys.proto";
 
 // add resource
 message EventPromptResourceAdd {
-	PromptResource resource = 1 [(gogoproto.nullable) = false];
+	PromptResource resource = 1 [(gogoproto.nullable) = true];
 }
 
 // remove matching unique name resource

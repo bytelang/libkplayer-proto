@@ -9,11 +9,11 @@ import "proto/keys.proto";
 import "gogoproto/gogo.proto";
 
 message EventMessageOutputAdd {
-	MessageOutput output = 1 [(gogoproto.nullable) = false];
+	MessageOutput output = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 
 message EventMessageOutputRemove {
-	MessageOutput output = 1 [(gogoproto.nullable) = false];
+	MessageOutput output = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
