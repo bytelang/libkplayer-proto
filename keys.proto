@@ -73,8 +73,6 @@ enum EventAction {
 message MessageResource {
 	bytes path = 1;
 	bytes unique = 2;
-	uint64 start_time = 3;
-	uint64 end_time = 4;
 }
 message PromptResource {
 	bytes path = 1;
@@ -85,7 +83,6 @@ message PromptResource {
 message MessageOutput {
 	bytes path = 1;
 	bytes unique = 2;
-	uint64 start_time = 3;
 }
 message PromptOutput {
 	bytes path = 1;
@@ -96,7 +93,6 @@ message PromptOutput {
 message MessagePlugin {
 	bytes path = 1;
 	bytes unique = 2;
-	uint64 start_time = 3;
 	map<string, bytes> params = 4;
 }
 message PromptPlugin {
