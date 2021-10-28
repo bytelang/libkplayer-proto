@@ -39,12 +39,12 @@ message EventMessageResourceRemove {
 
 // message current no playlist
 message EventMessageResourceList {
-	repeated MessageResource resource = 1 [(gogoproto.nullable) = true];
+	repeated MessageResource resources = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
 
 // message play history playlist
 message EventMessageResourceHistory {
-	repeated MessageResource resource = 1;
+	repeated MessageResource resources = 1;
 	bytes error = 2;
 }

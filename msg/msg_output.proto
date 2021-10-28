@@ -19,6 +19,6 @@ message EventMessageOutputRemove {
 }
 
 message EventMessageOutputList {
-	repeated MessageOutput output = 1 [(gogoproto.nullable) = true];
+	repeated MessageOutput outputs = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
