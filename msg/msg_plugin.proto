@@ -22,3 +22,8 @@ message EventMessagePluginList {
 	repeated MessagePlugin plugins = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
+
+message EventMessagePluginUpdate {
+	MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
+	bytes error = 2;
+}

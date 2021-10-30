@@ -18,3 +18,8 @@ message EventPromptPluginRemove {
 
 message EventPromptPluginList {
 }
+
+message EventPromptPluginUpdate {
+	bytes unique = 1;
+	map<string, bytes> params= 2;
+}
