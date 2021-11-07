@@ -101,3 +101,16 @@ message PromptPlugin {
 	bytes unique = 2;
 	map<string, bytes> params = 4;
 }
+
+// information
+message Information{
+	string cpp_std = 1;
+	string tool_chains = 2;
+	string build_chains = 3;
+	string major_version = 4;
+	string plugin_version = 5;
+	string license_version = 6;
+	string build_type = 7;
+	string archive_version = 8;
+	string copyright = 9;
+}
