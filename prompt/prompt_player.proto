@@ -16,7 +16,3 @@ message EventPromptPlayerSkip {
 
 message EventPromptPlayerContinue {
 }
-
-message EventPromptPlayerSeek {
-	int64 seek = 1;
-}
