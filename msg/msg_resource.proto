@@ -54,4 +54,5 @@ message EventMessageResourceCurrent{
   MessageResource resource = 1;
   uint64 duration = 2;
   uint64 seek = 3;
+  bytes error =4;
 }
