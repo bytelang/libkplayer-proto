@@ -25,3 +25,7 @@ message EventPromptResourceList {
 // get player play history
 message EventPromptResourceHistory {
 }
+
+// get current resource
+message EventPromptResourceCurrent{
+}
