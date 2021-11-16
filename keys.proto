@@ -76,11 +76,13 @@ message MessageResource {
 	bytes path = 1;
 	bytes unique = 2;
   int64 seek = 3;
+  int64 end = 4;
 }
 message PromptResource {
 	bytes path = 1;
 	bytes unique = 2;
 	int64 seek = 3;
+	int64 end = 4;
 }
 
 // output
