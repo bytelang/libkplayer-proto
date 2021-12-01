@@ -22,3 +22,8 @@ message EventMessageOutputList {
 	repeated MessageOutput outputs = 1 [(gogoproto.nullable) = true];
 	bytes error = 2;
 }
+
+message EventMessageOutputDisconnect {
+	MessageOutput output = 1 [(gogoproto.nullable) = true];
+	bytes error = 2;
+}
