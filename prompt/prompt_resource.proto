@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package KPProto.Prompt;
 
-option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/proto/prompt";
 
 import "gogoproto/gogo.proto";
@@ -15,7 +14,7 @@ message EventPromptResourceAdd {
 
 // remove matching unique name resource
 message EventPromptResourceRemove {
-	bytes unique = 1;
+	string unique = 1;
 }
 
 // get player current resource list

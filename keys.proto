@@ -2,12 +2,11 @@ syntax = "proto3";
 
 package KPProto;
 
-option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/proto";
 
 import "gogoproto/gogo.proto";
 
-enum EventAction {
+enum EventPromptAction {
 	option (gogoproto.goproto_enum_prefix) = false;
 
 	// ----------------------------------
@@ -37,75 +36,56 @@ enum EventAction {
 	EVENT_PROMPT_ACTION_PLUGIN_REMOVE = 12;
 	EVENT_PROMPT_ACTION_PLUGIN_LIST = 13;
 	EVENT_PROMPT_ACTION_PLUGIN_UPDATE = 32;
+}
 
+enum EventMessageAction {
+	option (gogoproto.goproto_enum_prefix) = false;
 	// ----------------------------------
 	// define message action
 	// broadcast message action from kplayer core
 	// ----------------------------------
 
 	// player
-	EVENT_MESSAGE_ACTION_PLAYER_STARTED = 14;
-	EVENT_MESSAGE_ACTION_PLAYER_PAUSE = 15;
-	EVENT_MESSAGE_ACTION_PLAYER_CONTINUE = 16;
-	EVENT_MESSAGE_ACTION_PLAYER_SKIP = 17;
-	EVENT_MESSAGE_ACTION_PLAYER_ENDED = 18;
+	EVENT_MESSAGE_ACTION_PLAYER_STARTED = 0;
+	EVENT_MESSAGE_ACTION_PLAYER_PAUSE = 1;
+	EVENT_MESSAGE_ACTION_PLAYER_CONTINUE = 2;
+	EVENT_MESSAGE_ACTION_PLAYER_SKIP = 3;
+	EVENT_MESSAGE_ACTION_PLAYER_ENDED = 4;
 
 	// resource
-	EVENT_MESSAGE_ACTION_RESOURCE_START = 19;
-	EVENT_MESSAGE_ACTION_RESOURCE_FINISH = 20;
-	EVENT_MESSAGE_ACTION_RESOURCE_EMPTY = 21;
-	EVENT_MESSAGE_ACTION_RESOURCE_REMOVE = 22;
-	EVENT_MESSAGE_ACTION_RESOURCE_ADD = 23;
-	EVENT_MESSAGE_ACTION_RESOURCE_LIST = 24;
-	EVENT_MESSAGE_ACTION_RESOURCE_CURRENT = 33;
+	EVENT_MESSAGE_ACTION_RESOURCE_START = 5;
+	EVENT_MESSAGE_ACTION_RESOURCE_FINISH = 6;
+	EVENT_MESSAGE_ACTION_RESOURCE_EMPTY = 7;
+	EVENT_MESSAGE_ACTION_RESOURCE_REMOVE = 8;
+	EVENT_MESSAGE_ACTION_RESOURCE_ADD = 9;
+	EVENT_MESSAGE_ACTION_RESOURCE_LIST = 10;
+	EVENT_MESSAGE_ACTION_RESOURCE_CURRENT = 11;
 
 	// output
-	EVENT_MESSAGE_ACTION_OUTPUT_ADD = 25;
-	EVENT_MESSAGE_ACTION_OUTPUT_REMOVE = 26;
-	EVENT_MESSAGE_ACTION_OUTPUT_LIST = 27;
-	EVENT_MESSAGE_ACTION_OUTPUT_DISCONNECT = 35;
+	EVENT_MESSAGE_ACTION_OUTPUT_ADD = 12;
+	EVENT_MESSAGE_ACTION_OUTPUT_REMOVE = 13;
+	EVENT_MESSAGE_ACTION_OUTPUT_LIST = 14;
+	EVENT_MESSAGE_ACTION_OUTPUT_DISCONNECT = 15;
 
 	// plugin
-	EVENT_MESSAGE_ACTION_PLUGIN_ADD = 28;
-	EVENT_MESSAGE_ACTION_PLUGIN_REMOVE = 29;
-	EVENT_MESSAGE_ACTION_PLUGIN_LIST = 30;
-	EVENT_MESSAGE_ACTION_PLUGIN_UPDATE = 31;
+	EVENT_MESSAGE_ACTION_PLUGIN_ADD = 16;
+	EVENT_MESSAGE_ACTION_PLUGIN_REMOVE = 17;
+	EVENT_MESSAGE_ACTION_PLUGIN_LIST = 18;
+	EVENT_MESSAGE_ACTION_PLUGIN_UPDATE = 19;
 }
 
 // resource
 message MessageResource {
-	bytes path = 1;
-	bytes unique = 2;
+	string path = 1;
+	string unique = 2;
   int64 seek = 3;
   int64 end = 4;
 }
 message PromptResource {
-	bytes path = 1;
-	bytes unique = 2;
+	string path = 1;
+	string unique = 2;
 	int64 seek = 3;
 	int64 end = 4;
-}
-
-// output
-message MessageOutput {
-	bytes path = 1;
-	bytes unique = 2;
-}
-message PromptOutput {
-	bytes path = 1;
-	bytes unique = 2;
-}
-
-// plugin
-message MessagePlugin {
-	bytes path = 1;
-	bytes unique = 2;
-	map<string, bytes> params = 4;
-}
-message PromptPlugin {
-	bytes path = 1;
-	bytes unique = 2;
-	map<string, bytes> params = 4;
 }
 
 // information

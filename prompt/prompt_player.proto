@@ -2,7 +2,6 @@ syntax = "proto3";
 
 package KPProto.Prompt;
 
-option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/proto/prompt";
 
 message EventPromptPlayerStop {

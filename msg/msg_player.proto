@@ -2,25 +2,24 @@ syntax = "proto3";
 
 package KPProto.Msg;
 
-option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/proto/msg";
 
 message EventMessagePlayerStarted {
-	bytes error = 1;
+	string error = 1;
 }
 
 message EventMessagePlayerEnded {
-	bytes error = 1;
+	string error = 1;
 }
 
 message EventMessagePlayerPause {
-	bytes error = 1;
+	string error = 1;
 }
 
 message EventMessagePlayerContinue {
-	bytes error = 1;
+	string error = 1;
 }
 
 message EventMessagePlayerSkip {
-	bytes error = 1;
+	string error = 1;
 }

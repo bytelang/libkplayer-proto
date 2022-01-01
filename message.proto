@@ -4,10 +4,14 @@ package KPProto;
 
 import "proto/keys.proto";
 
-option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/proto";
 
 message KPMessage {
-	EventAction action = 2;
-	bytes body = 3;
+	EventMessageAction action = 1;
+	string body = 2;
+}
+
+message KPPrompt {
+	EventPromptAction action = 1;
+	string body = 2;
 }

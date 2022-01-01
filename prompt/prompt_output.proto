@@ -2,18 +2,22 @@ syntax = "proto3";
 
 package KPProto.Prompt;
 
-option optimize_for = LITE_RUNTIME;
 option go_package = "github.com/bytelang/kplayer/types/core/proto/prompt";
 
-import "proto/keys.proto";
 import "gogoproto/gogo.proto";
+
+// output
+message PromptOutput {
+	string path = 1;
+	string unique = 2;
+}
 
 message EventPromptOutputAdd {
 	PromptOutput output = 1 [(gogoproto.nullable) = true];
 }
 
 message EventPromptOutputRemove {
-	bytes unique = 1;
+	string unique = 1;
 }
 
 message EventPromptOutputList {
