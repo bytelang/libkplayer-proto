@@ -10,7 +10,8 @@ import "gogoproto/gogo.proto";
 
 message PromptPlugin {
 	string path = 1;
-	string unique = 2;
+	bytes content = 2;
+	string unique = 3;
 	map<string, string> params = 4;
 }
 
