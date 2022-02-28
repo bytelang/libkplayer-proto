@@ -11,7 +11,12 @@ import "gogoproto/gogo.proto";
 message EventMessageResourceStart {
 	MessageResource resource = 1 [(gogoproto.nullable) = true];
 	string error = 2;
-	uint64 duration = 3;
+}
+
+message EventMessageResourceChecked {
+	MessageResource resource = 1 [(gogoproto.nullable) = true];
+	uint64 duration = 2 ;
+	string error = 3;
 }
 
 // message resource play finished
