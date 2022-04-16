@@ -13,10 +13,23 @@ message EventMessageResourceStart {
 	string error = 2;
 }
 
+// message resource checked
 message EventMessageResourceChecked {
 	MessageResource resource = 1 [(gogoproto.nullable) = true];
-	uint64 duration = 2 ;
-	string error = 3;
+	EventMessageResourceInputAttribute input_attribute= 2 [(gogoproto.nullable) = true];
+	EventMessageResourceCheckedOutputOption output_option = 3 [(gogoproto.nullable) = true];
+	string error = 4;
+}
+message EventMessageResourceCheckedOutputOption {
+    uint64 video_width = 1;
+    uint64 video_height = 2;
+    uint64 video_fps = 3;
+    uint64 audio_sample_rate = 4;
+    uint64 audio_channel_layout = 5;
+    uint64 audio_channels = 6;
+}
+message EventMessageResourceInputAttribute {
+	uint64 duration = 1;
 }
 
 // message resource play finished
