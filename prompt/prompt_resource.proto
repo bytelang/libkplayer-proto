@@ -4,17 +4,16 @@ package KPProto.Prompt;
 
 option go_package = "github.com/bytelang/kplayer/types/core/proto/prompt";
 
-import "gogoproto/gogo.proto";
 import "proto/keys.proto";
 
 // add resource
 message EventPromptResourceAdd {
-	PromptResource resource = 1 [(gogoproto.nullable) = true];
+  PromptResource resource = 1;
 }
 
 // remove matching unique name resource
 message EventPromptResourceRemove {
-	string unique = 1;
+  string unique = 1;
 }
 
 // get player current resource list

@@ -7,11 +7,11 @@ import "proto/keys.proto";
 option go_package = "github.com/bytelang/kplayer/types/core/proto";
 
 message KPMessage {
-	EventMessageAction action = 1;
-	string body = 2;
+  EventMessageAction action = 1;
+  string body = 2;
 }
 
 message KPPrompt {
-	EventPromptAction action = 1;
-	string body = 2;
+  EventPromptAction action = 1;
+  string body = 2;
 }

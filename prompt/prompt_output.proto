@@ -4,8 +4,6 @@ package KPProto.Prompt;
 
 option go_package = "github.com/bytelang/kplayer/types/core/proto/prompt";
 
-import "gogoproto/gogo.proto";
-
 // output
 message PromptOutput {
 	string path = 1;
@@ -13,7 +11,7 @@ message PromptOutput {
 }
 
 message EventPromptOutputAdd {
-	PromptOutput output = 1 [(gogoproto.nullable) = true];
+	PromptOutput output = 1;
 }
 
 message EventPromptOutputRemove {

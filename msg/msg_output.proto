@@ -4,29 +4,27 @@ package KPProto.Msg;
 
 option go_package = "github.com/bytelang/kplayer/types/core/proto/msg";
 
-import "gogoproto/gogo.proto";
-
 message MessageOutput {
 	string path = 1;
 	string unique = 2;
 }
 
 message EventMessageOutputAdd {
-	MessageOutput output = 1 [(gogoproto.nullable) = true];
+	MessageOutput output = 1;
 	string error = 2;
 }
 
 message EventMessageOutputRemove {
-	MessageOutput output = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+	MessageOutput output = 1;
+	string error =2;
 }
 
 message EventMessageOutputList {
-	repeated MessageOutput outputs = 1 [(gogoproto.nullable) = true];
+	repeated MessageOutput outputs = 1;
 	string error = 2;
 }
 
 message EventMessageOutputDisconnect {
-	MessageOutput output = 1 [(gogoproto.nullable) = true];
+	MessageOutput output = 1;
 	string error = 2;
 }

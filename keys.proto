@@ -4,11 +4,7 @@ package KPProto;
 
 option go_package = "github.com/bytelang/kplayer/types/core/proto";
 
-import "gogoproto/gogo.proto";
-
 enum EventPromptAction {
-	option (gogoproto.goproto_enum_prefix) = false;
-
 	// ----------------------------------
 	// define prompt action
 	// send command to kplayer core
@@ -39,7 +35,6 @@ enum EventPromptAction {
 }
 
 enum EventMessageAction {
-	option (gogoproto.goproto_enum_prefix) = false;
 	// ----------------------------------
 	// define message action
 	// broadcast message action from kplayer core

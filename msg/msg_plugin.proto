@@ -4,34 +4,32 @@ package KPProto.Msg;
 
 option go_package = "github.com/bytelang/kplayer/types/core/proto/msg";
 
-import "gogoproto/gogo.proto";
-
 message MessagePlugin {
-	string path = 1;
-	string unique = 2;
-	string name = 3;
-	string author = 4;
-	int32 media_type = 5;
-	int32 sub_count = 6;
-	map<string, string> params = 7;
+  string path = 1;
+  string unique = 2;
+  string name = 3;
+  string author = 4;
+  int32 media_type = 5;
+  int32 sub_count = 6;
+  map<string, string> params = 7;
 }
 
 message EventMessagePluginAdd {
-	MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  MessagePlugin plugin = 1;
+  string error = 2;
 }
 
 message EventMessagePluginRemove {
-	MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  MessagePlugin plugin = 1;
+  string error = 2;
 }
 
 message EventMessagePluginList {
-	repeated MessagePlugin plugins = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  repeated MessagePlugin plugins = 1;
+  string error = 2;
 }
 
 message EventMessagePluginUpdate {
-	MessagePlugin plugin = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  MessagePlugin plugin = 1;
+  string error = 2;
 }

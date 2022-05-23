@@ -5,66 +5,65 @@ package KPProto.Msg;
 option go_package = "github.com/bytelang/kplayer/types/core/proto/msg";
 
 import "proto/keys.proto";
-import "gogoproto/gogo.proto";
 
 // message resource start playing
 message EventMessageResourceStart {
-	MessageResource resource = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  MessageResource resource = 1;
+  string error = 2;
 }
 
 // message resource checked
 message EventMessageResourceChecked {
-	MessageResource resource = 1 [(gogoproto.nullable) = true];
-	EventMessageResourceInputAttribute input_attribute= 2 [(gogoproto.nullable) = true];
-	EventMessageResourceCheckedOutputOption output_option = 3 [(gogoproto.nullable) = true];
-	string error = 4;
+  MessageResource resource = 1;
+  EventMessageResourceInputAttribute input_attribute = 2;
+  EventMessageResourceCheckedOutputOption output_option = 3;
+  string error = 4;
 }
 message EventMessageResourceCheckedOutputOption {
-    uint64 video_width = 1;
-    uint64 video_height = 2;
-    uint64 video_fps = 3;
-    uint64 audio_sample_rate = 4;
-    uint64 audio_channel_layout = 5;
-    uint64 audio_channels = 6;
+  uint64 video_width = 1;
+  uint64 video_height = 2;
+  uint64 video_fps = 3;
+  uint64 audio_sample_rate = 4;
+  uint64 audio_channel_layout = 5;
+  uint64 audio_channels = 6;
 }
 message EventMessageResourceInputAttribute {
-	uint64 duration = 1;
+  uint64 duration = 1;
 }
 
 // message resource play finished
 message EventMessageResourceFinish {
-	MessageResource resource = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  MessageResource resource = 1;
+  string error = 2;
 }
 
 // message resource empty wait for new resource
 message EventMessageResourceEmpty {
-	string error = 3;
+  string error = 3;
 }
 
 // message resource had success add
 message EventMessageResourceAdd {
-	MessageResource resource = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  MessageResource resource = 1;
+  string error = 2;
 }
 
 // message resource had success remove
 message EventMessageResourceRemove {
-	MessageResource resource = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  MessageResource resource = 1;
+  string error = 2;
 }
 
 // message current no playlist
 message EventMessageResourceList {
-	repeated MessageResource resources = 1 [(gogoproto.nullable) = true];
-	string error = 2;
+  repeated MessageResource resources = 1;
+  string error = 2;
 }
 
 // message play history playlist
 message EventMessageResourceHistory {
-	repeated MessageResource resources = 1;
-	string error = 2;
+  repeated MessageResource resources = 1;
+  string error = 2;
 }
 
 // message current playing resource
