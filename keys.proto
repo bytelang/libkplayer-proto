@@ -5,94 +5,94 @@ package KPProto;
 option go_package = "github.com/bytelang/kplayer/types/core/proto";
 
 enum EventPromptAction {
-	// ----------------------------------
-	// define prompt action
-	// send command to kplayer core
-	// ----------------------------------
+  // ----------------------------------
+  // define prompt action
+  // send command to kplayer core
+  // ----------------------------------
 
-	// player
-	EVENT_PROMPT_ACTION_PLAYER_STOP = 0;
-	EVENT_PROMPT_ACTION_PLAYER_PAUSE = 1;
-	EVENT_PROMPT_ACTION_PLAYER_SKIP = 2;
-	EVENT_PROMPT_ACTION_PLAYER_CONTINUE = 3;
+  // player
+  EVENT_PROMPT_ACTION_PLAYER_STOP = 0;
+  EVENT_PROMPT_ACTION_PLAYER_PAUSE = 1;
+  EVENT_PROMPT_ACTION_PLAYER_SKIP = 2;
+  EVENT_PROMPT_ACTION_PLAYER_CONTINUE = 3;
 
-	// output
-	EVENT_PROMPT_ACTION_OUTPUT_ADD = 5;
-	EVENT_PROMPT_ACTION_OUTPUT_REMOVE = 6;
-	EVENT_PROMPT_ACTION_OUTPUT_LIST = 7;
+  // output
+  EVENT_PROMPT_ACTION_OUTPUT_ADD = 5;
+  EVENT_PROMPT_ACTION_OUTPUT_REMOVE = 6;
+  EVENT_PROMPT_ACTION_OUTPUT_LIST = 7;
 
-	// resource
-	EVENT_PROMPT_ACTION_RESOURCE_ADD = 8;
-	EVENT_PROMPT_ACTION_RESOURCE_REMOVE = 9;
-	EVENT_PROMPT_ACTION_RESOURCE_LIST = 10;
-	EVENT_PROMPT_ACTION_RESOURCE_CURRENT = 34;
+  // resource
+  EVENT_PROMPT_ACTION_RESOURCE_ADD = 8;
+  EVENT_PROMPT_ACTION_RESOURCE_REMOVE = 9;
+  EVENT_PROMPT_ACTION_RESOURCE_LIST = 10;
+  EVENT_PROMPT_ACTION_RESOURCE_CURRENT = 34;
 
-	// plugin
-	EVENT_PROMPT_ACTION_PLUGIN_ADD = 11;
-	EVENT_PROMPT_ACTION_PLUGIN_REMOVE = 12;
-	EVENT_PROMPT_ACTION_PLUGIN_LIST = 13;
-	EVENT_PROMPT_ACTION_PLUGIN_UPDATE = 32;
+  // plugin
+  EVENT_PROMPT_ACTION_PLUGIN_ADD = 11;
+  EVENT_PROMPT_ACTION_PLUGIN_REMOVE = 12;
+  EVENT_PROMPT_ACTION_PLUGIN_LIST = 13;
+  EVENT_PROMPT_ACTION_PLUGIN_UPDATE = 32;
 }
 
 enum EventMessageAction {
-	// ----------------------------------
-	// define message action
-	// broadcast message action from kplayer core
-	// ----------------------------------
+  // ----------------------------------
+  // define message action
+  // broadcast message action from kplayer core
+  // ----------------------------------
 
-	// player
-	EVENT_MESSAGE_ACTION_PLAYER_STARTED = 0;
-	EVENT_MESSAGE_ACTION_PLAYER_PAUSE = 1;
-	EVENT_MESSAGE_ACTION_PLAYER_CONTINUE = 2;
-	EVENT_MESSAGE_ACTION_PLAYER_SKIP = 3;
-	EVENT_MESSAGE_ACTION_PLAYER_ENDED = 4;
+  // player
+  EVENT_MESSAGE_ACTION_PLAYER_STARTED = 0;
+  EVENT_MESSAGE_ACTION_PLAYER_PAUSE = 1;
+  EVENT_MESSAGE_ACTION_PLAYER_CONTINUE = 2;
+  EVENT_MESSAGE_ACTION_PLAYER_SKIP = 3;
+  EVENT_MESSAGE_ACTION_PLAYER_ENDED = 4;
 
-	// resource
-	EVENT_MESSAGE_ACTION_RESOURCE_START = 5;
-	EVENT_MESSAGE_ACTION_RESOURCE_FINISH = 6;
-	EVENT_MESSAGE_ACTION_RESOURCE_EMPTY = 7;
-	EVENT_MESSAGE_ACTION_RESOURCE_REMOVE = 8;
-	EVENT_MESSAGE_ACTION_RESOURCE_ADD = 9;
-	EVENT_MESSAGE_ACTION_RESOURCE_LIST = 10;
-	EVENT_MESSAGE_ACTION_RESOURCE_CURRENT = 11;
-	EVENT_MESSAGE_ACTION_RESOURCE_CHECKED = 20;
+  // resource
+  EVENT_MESSAGE_ACTION_RESOURCE_START = 5;
+  EVENT_MESSAGE_ACTION_RESOURCE_FINISH = 6;
+  EVENT_MESSAGE_ACTION_RESOURCE_EMPTY = 7;
+  EVENT_MESSAGE_ACTION_RESOURCE_REMOVE = 8;
+  EVENT_MESSAGE_ACTION_RESOURCE_ADD = 9;
+  EVENT_MESSAGE_ACTION_RESOURCE_LIST = 10;
+  EVENT_MESSAGE_ACTION_RESOURCE_CURRENT = 11;
+  EVENT_MESSAGE_ACTION_RESOURCE_CHECKED = 20;
 
-	// output
-	EVENT_MESSAGE_ACTION_OUTPUT_ADD = 12;
-	EVENT_MESSAGE_ACTION_OUTPUT_REMOVE = 13;
-	EVENT_MESSAGE_ACTION_OUTPUT_LIST = 14;
-	EVENT_MESSAGE_ACTION_OUTPUT_DISCONNECT = 15;
+  // output
+  EVENT_MESSAGE_ACTION_OUTPUT_ADD = 12;
+  EVENT_MESSAGE_ACTION_OUTPUT_REMOVE = 13;
+  EVENT_MESSAGE_ACTION_OUTPUT_LIST = 14;
+  EVENT_MESSAGE_ACTION_OUTPUT_DISCONNECT = 15;
 
-	// plugin
-	EVENT_MESSAGE_ACTION_PLUGIN_ADD = 16;
-	EVENT_MESSAGE_ACTION_PLUGIN_REMOVE = 17;
-	EVENT_MESSAGE_ACTION_PLUGIN_LIST = 18;
-	EVENT_MESSAGE_ACTION_PLUGIN_UPDATE = 19;
+  // plugin
+  EVENT_MESSAGE_ACTION_PLUGIN_ADD = 16;
+  EVENT_MESSAGE_ACTION_PLUGIN_REMOVE = 17;
+  EVENT_MESSAGE_ACTION_PLUGIN_LIST = 18;
+  EVENT_MESSAGE_ACTION_PLUGIN_UPDATE = 19;
 }
 
 // resource
 message MessageResource {
-	string path = 1;
-	string unique = 2;
+  string path = 1;
+  string unique = 2;
   int64 seek = 3;
   int64 end = 4;
 }
 message PromptResource {
-	string path = 1;
-	string unique = 2;
-	int64 seek = 3;
-	int64 end = 4;
+  string path = 1;
+  string unique = 2;
+  int64 seek = 3;
+  int64 end = 4;
 }
 
 // information
 message Information{
-	string cpp_std = 1;
-	string tool_chains = 2;
-	string build_chains = 3;
-	string major_version = 4;
-	string plugin_version = 5;
-	string license_version = 6;
-	string build_type = 7;
-	string archive_version = 8;
-	string copyright = 9;
+  string cpp_std = 1;
+  string tool_chains = 2;
+  string build_chains = 3;
+  string major_version = 4;
+  string plugin_version = 5;
+  string license_version = 6;
+  string build_type = 7;
+  string archive_version = 8;
+  string copyright = 9;
 }
