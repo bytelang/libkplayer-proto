@@ -23,3 +23,7 @@ message EventMessagePlayerContinue {
 message EventMessagePlayerSkip {
   string error = 1;
 }
+
+message EventMessagePlayerStop{
+  string error = 1;
+}
