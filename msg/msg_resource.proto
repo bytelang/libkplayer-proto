@@ -67,10 +67,15 @@ message EventMessageResourceHistory {
 }
 
 // message current playing resource
-message EventMessageResourceCurrent{
+message EventMessageResourceCurrent {
   MessageResource resource = 1;
   uint64 duration = 2;
   int64 seek = 3;
   string error = 4;
   bool hit_cache = 5;
+}
+
+// message resource seek
+message EventMessageResourceSeek {
+  MessageResource resource = 1;
 }
