@@ -71,11 +71,12 @@ message EventMessageResourceCurrent {
   MessageResource resource = 1;
   uint64 duration = 2;
   int64 seek = 3;
-  string error = 4;
-  bool hit_cache = 5;
+  bool hit_cache = 4;
+  string error = 5;
 }
 
 // message resource seek
 message EventMessageResourceSeek {
   MessageResource resource = 1;
+  string error = 2;
 }
