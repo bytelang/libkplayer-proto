@@ -18,6 +18,7 @@ message EventMessageResourceChecked {
   EventMessageResourceInputAttribute input_attribute = 2;
   EventMessageResourceCheckedOutputOption output_option = 3;
   string error = 4;
+  bool hit_cache = 5;
 }
 message EventMessageResourceCheckedOutputOption {
   uint64 video_width = 1;
