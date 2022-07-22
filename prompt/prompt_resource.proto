@@ -30,6 +30,5 @@ message EventPromptResourceCurrent {
 
 // seek resource
 message EventPromptResourceSeek {
-  string unique = 1;
-  int64 seek = 2;
+  PromptResource resource = 1;
 }
