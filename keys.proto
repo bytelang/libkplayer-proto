@@ -74,17 +74,37 @@ enum EventMessageAction {
 }
 
 // resource
+enum ResourceInputType {
+  RESOURCE_INPUT_TYPE_UNKNOWN = 0;
+  RESOURCE_INPUT_TYPE_SINGLE = 1;
+  RESOURCE_INPUT_TYPE_MIX = 2;
+}
+enum ResourceMediaType{
+  RESOURCE_MEDIA_TYPE_UNKNOWN = 0;
+  RESOURCE_MEDIA_TYPE_VIDEO = 1;
+  RESOURCE_MEDIA_TYPE_AUDIO = 2;
+}
+
+message ResourceGroup {
+  string path = 1;
+  ResourceMediaType media_type = 2;
+  bool persistent_loop = 3;
+}
 message MessageResource {
   string path = 1;
   string unique = 2;
   int64 seek = 3;
   int64 end = 4;
+  ResourceInputType input_type = 5;
+  repeated ResourceGroup groups = 6;
 }
 message PromptResource {
   string path = 1;
   string unique = 2;
   int64 seek = 3;
   int64 end = 4;
+  ResourceInputType input_type = 5;
+  repeated ResourceGroup groups = 6;
 }
 
 // information
