@@ -27,3 +27,28 @@ message EventMessagePlayerSkip {
 message EventMessagePlayerStop{
   string error = 1;
 }
+
+message EventMessagePlayerOutputOption{
+  int32  video_scale_width = 1;
+  int32  video_scale_height = 2;
+  int64  video_bitrate = 3;
+  uint64 video_quality = 4;
+  uint64 video_fps = 5;
+  string video_pix_fmt = 6;
+  string video_codec_id = 7;
+  int32  audio_sample_rate = 8;
+  int32  audio_channel_layout = 9;
+  int32  audio_channels = 10;
+  string audio_pix_fmt = 11;
+  string audio_codec_id = 12;
+  string output_type = 13;
+  string output_scale_strategy = 14;
+}
+
+message EventMessagePlayerSetQuality{
+  string error = 1;
+}
+
+message EventMessagePlayerSetBitrate{
+  string error = 1;
+}

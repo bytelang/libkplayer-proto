@@ -15,3 +15,14 @@ message EventPromptPlayerSkip {
 
 message EventPromptPlayerContinue {
 }
+
+message EventPromptPlayerOutputOption{
+}
+
+message EventPromptPlayerSetQuality{
+  int64 quality = 1;
+}
+
+message EventPromptPlayerSetBitrate{
+  int64 bitrate = 1;
+}
